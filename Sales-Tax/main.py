@@ -1,22 +1,38 @@
 #
-# Name
-# Date
-# Sales Tax Programming Project
+# Name: Wil Wagner
+# Date: 1/29/2025
+# Sales_Tax
 # COSC 1010
 #
 
-# Variable declarations
+# Set tax rates
+state_sales_tax_rate = 0.05
+county_sales_tax_rate = 0.025
 
-# Constants for the state and county tax rates
+# Get amount of purchase
+purchase_amount = float(input('What is the amount of your purchase: '))
 
-# Get the amount of the purchase.
+# Calculate State sales tax at 5%
+state_tax = purchase_amount * state_sales_tax_rate
 
-# Calculate the state sales tax.
+# Calculate County sales tax at 2.5%
+county_tax = purchase_amount * county_sales_tax_rate
 
-# Calculate the county sales tax.
+# Calculate the total tax
+total_tax = state_tax + county_tax
 
-# Calculate the total tax.
+# Calculate full total of sale
+total = purchase_amount + total_tax
 
-# Calculate the total of the sale.
+# Print the amount of sale
+print('Amount of purchase: $\t', format(purchase_amount, ',.2f'))
 
-# Print information about the sale.
+# Print bothe the State and County tax
+print('State sales tax: $\t', format(state_tax, ',.2f'))
+print('County sales tax: $\t', format(county_tax, ',.2f'))
+
+# Print Total sales tax
+print('Total sales tax: $\t', format(total_tax, ',.2f'))
+
+# Print total amount due at purchase
+print('Sales Total: $\t\t', format(total, ',.2f'))
