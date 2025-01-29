@@ -1,14 +1,17 @@
 #
-# Name
-# Date
-# Sales Prediction Programming Project
+# Name: Wil Wagner
+# Date: 1/29/2025
+# Sales_Prediction
 # COSC 1010
 #
 
-# Variables to hold the sales total and the profit
+# Get the total projected sales and calculate the profits
 
-# Get the amount of projected sales.
+# Get the projected profits
+total_sales = float(input('Enter projected sales: '))
 
-# Calculate the projected profit.
+# Calculate the projected profits as 23% of total sales.
+projected_profit = total_sales * 0.23
 
-# Print the projected profit.
+# Display the projected profit
+print('Your projected profit is $', format(projected_profit, ',.2f'))
