@@ -23,7 +23,6 @@ num_attending = int(input('Please enter the number of people attending: '))
 # Get the number of hot dogs given to attendees.
 num_per_person = int(input('Please enter the number of hot dogs per person: '))
 
-
 # Calculated the total number of hot dogs and buns required.
 total = num_attending * num_per_person
 
