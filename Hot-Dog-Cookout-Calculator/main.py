@@ -23,7 +23,6 @@ num_attending = int(input('Please enter the number of people attending: '))
 # Get the number of hot dogs given to attendees.
 num_per_person = int(input('Please enter the number of hot dogs per person: '))
 
-print()
 
 # Calculated the total number of hot dogs and buns required.
 total = num_attending * num_per_person
@@ -67,7 +66,7 @@ else:
 buns_left = HOT_DOG_BUNS_PER_PACKAGE * min_buns - total
 
 # Display a minimum number of hot dogs reguired.
-print('Minimum packages of hot dogs needed: ', min_dogs)
+print('\nMinimum packages of hot dogs needed: ', min_dogs)
 
 # Display a minimum number of hot dog buns required.
 print('Minimum packages of hot dog buns needed: ', min_buns)
