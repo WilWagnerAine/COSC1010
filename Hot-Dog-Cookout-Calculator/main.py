@@ -73,6 +73,5 @@ print('Minimum packages of hot dog buns needed: ', min_buns)
 # Display the number of hot dog left over.
 print('Hot dogs left over: ', dogs_left)
 
-
 # Display the number of hot dog buns left over.
 print('Hot dog buns left over: ', buns_left)
