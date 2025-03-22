@@ -38,8 +38,9 @@ def main():
         print('IOError: There was an input/Output Error, accessing the file.')
     
     except ValueError:
-        # Message for ValueError
+        # Strip the \n from the variable line
         line = line.rstrip('\n')
+        # Message for ValueError
         print(f'ERROR: There was an error converting, {line} to an integer')
     
     else:
