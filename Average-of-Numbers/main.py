@@ -19,7 +19,7 @@ def main():
         line = myfile.readline()
 
         # If the is not an empty string, continue.
-        while lines != '':
+        while line != '':
             # Add 1 to number of lines
             lines += 1
             # Place the number in line as interger in the number variable.
