@@ -1,51 +1,51 @@
 #
 # Name: Wil Wagner
 # Date: 19 April 2025
-# File Encryption
+# File Decryption
 # COSC 1010
 #
 
-# main function
+# Comment
 def main():
-    # Inititalize the encryption codes.
-    ec = encryption()
+    # Initialize the decryption codes.
+    dc = decryption()
 
-    # Call encrypt_file to encrypt and save file.
-    encrypt_file('text.txt', 'encrypted.txt', ec)
+    # Call decrypt_file to decrypt and save file.
+    decrypt_file('encrypted.txt', 'decrypted_file.txt', dc)
 
-# encrypt_file function
-def encrypt_file(input_file, output_file, codes):
+# deccrypt_file function
+def decrypt_file(encrypted_file, decrypted_file, codes):
     try:
         # Open the input_file in read only.
-        file = open(input_file, 'r')
+        file = open(encrypted_file, 'r')
+
+        # Read the file into encrypted_text.
+        encrypted_text = file.read()
         
-        # Read the file into original_text.
-        original_text = file.read()
-        
-        # Create the encrypted_text.
-        encrypted_text = ''
-        
-        # Iterate thru the text and substitute the encrypted
-        # char for the original text.
-        for char in original_text:
-            encrypted_text += codes.get(char, char)
-            
-        # Open encrypted.txt in write more.
-        encrypted_file = open(output_file, 'w')
-        
-        # Write the encrypted text to the file.
-        encrypted_file.write(encrypted_text)
-        
+        # Create the decrypted_text.
+        decrypted_text = ''
+
+        # Iterate thru the text and substitute the decrypted
+        # char for the encrypted text.
+        for char in encrypted_text:
+            decrypted_text += codes.get(char, char)
+
+        # Open decrypted_file.txt in write more.
+        decrypted_file = open('decrypted_file.txt', 'w')
+
+        # Write the decrypted text to the file.
+        decrypted_file.write(decrypted_text)
+
         # Notify the user that the process is complete.
-        print('Your file has been encrypted successfully!')
+        print('File Decrypted Successfully!')
 
     # Inform user that the file was not found.
     except FileNotFoundError:
-        print('Input file not found.')
+        print('Encrypted file not found.')
 
-# encryption key function
-def encryption():
-    encrypt_codes = {
+# decryption key function
+def decryption():
+    decrypt_codes = {
         'A' : ')', 'a' : '0', 'B' : '(', 'b' : '9', 'C' : '*', 'c' : '8',\
         'D' : '&', 'd' : '7', 'E' : '^', 'e' : '6', 'F' : '%', 'f' : '5',\
         'G' : '$', 'g' : '4', 'H' : '#', 'h' : '3', 'I' : '@', 'i' : '2',\
@@ -63,8 +63,8 @@ def encryption():
         '{' : '[', '[' : '{', '}' : ']', ']' : '}'
             }
 
-    # Return the encrypt_codes to main function
-    return encrypt_codes
+    # Return the decrypt_codes to main function.
+    return decrypt_codes
 
 #Call the main function.
 if  __name__  == '__main__':
