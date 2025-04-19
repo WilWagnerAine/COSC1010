@@ -5,6 +5,9 @@
 # COSC 1010
 #
 
+# The Decryption program is located in decyption.py. 
+# The instruction said make a new program so I did.
+
 # main function
 def main():
     # Inititalize the encryption codes.
