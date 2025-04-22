@@ -37,7 +37,7 @@ def decrypt_file(encrypted_file, decrypted_file, codes):
         decrypted_file.write(decrypted_text)
 
         # Notify the user that the process is complete.
-        print('File Decrypted Successfully!')
+        print('Your file has been decrypted successfully!')
 
     # Inform user that the file was not found.
     except FileNotFoundError:
